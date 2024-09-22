@@ -13,3 +13,18 @@ imgScreenImages.forEach(image => {
 closeButton.addEventListener('click', function () {
     imgScreenPopup.style.display = 'none';
 })
+
+const swiper = new Swiper(".mySwiper", {
+    scrollbar: {
+        el: ".swiper-scrollbar",
+        hide: true,
+    },
+    slidesPerView: "auto",
+    spaceBetween: 30,
+    centeredSlides: true,
+    loop: true,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
+});

@@ -428,45 +428,6 @@ header a:hover::after {
     margin-bottom: 50px;
 }
 
-.first-slide-img {
-    background: url("../img/slider1.jpg");
-    width: 548px;
-    height: 600px;
-    border-radius: 20px;
-}
-
-.second-slide-img {
-    background: url("../img/slider2.jpg");
-    width: 548px;
-    height: 600px;
-    border-radius: 20px;
-}
-
-.third-slide-img {
-    background: url("../img/slider3.jpg");
-    width: 548px;
-    height: 600px;
-    border-radius: 20px;
-}
-
-.slider h2 {
-    font-size: 48px;
-    font-weight: 900;
-    line-height: 57.6px;
-    letter-spacing: -0.02em;
-    text-align: left;
-    color: #222222;
-    margin-bottom: 20px;
-    margin-top: 30px;
-}
-
-.slider p {
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 30px;
-    text-align: left;
-    color: #555555;
-}
 
 .slider {
     width: 100%;
@@ -640,4 +601,50 @@ footer {
 .footer-underline-links {
     display: flex;
     gap: 32px;
+}
+
+/*-------------*/
+
+.swiper {
+    width: 100%;
+    padding: 128px 0 !important;
+}
+
+.swiper-slide .slide-img {
+    width: 548px;
+    height: 600px;
+    border-radius: 20px;
+}
+
+.swiper-slide:nth-child(1) .slide-img {
+    background: url("../img/slider1.jpg");
+}
+
+.swiper-slide:nth-child(2) .slide-img {
+    background: url("../img/slider2.jpg");
+}
+
+.swiper-slide:nth-child(2+n) .slide-img {
+    background: url("../img/slider3.jpg");
+}
+.swiper-slide h2 {
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 57.6px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    color: #222222;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+.swiper-slide p {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: left;
+    color: #555555;
+}
+.swiper-slide{
+    width: fit-content !important;
 }
