@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+</head>
+<body>
+<style>
+    body{
+        background: black;
+    }
+    .wrapper{
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        position: relative;
+    }
+    #slinky{
+        display: block;
+        /*position: static !important;*/
+        /*transform-style: flat !important;*/
+        /*transform: none !important;*/
+        height: 1000px;
+    }
+    #slinky .layer{
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100vw !important;
+        height: 100% !important;
+    }
+    #slinky svg{
+        width: 110%;
+        height: auto;
+        position: absolute;
+        top: 200px;
+        left: 100px;
+        transform: translate(0, 0);
+    }
+    #slinky .layer:nth-child(2) svg{
+        transform: translate(-3px, 25px);
+    }
+
+    #slinky .layer:nth-child(3) svg{
+        transform: translate(-6px, 50px);
+    }
+
+    #slinky .layer:nth-child(4) svg{
+        transform: translate(-9px, 75px);
+    }
+
+    #slinky .layer:nth-child(5) svg{
+        transform: translate(-12px, 100px);
+    }
+
+    #slinky .layer:nth-child(6) svg{
+        transform: translate(-15px, 125px);
+    }
+
+    #slinky .layer:nth-child(7) svg{
+        transform: translate(-18px, 150px);
+    }
+
+    #slinky .layer:nth-child(8) svg{
+        transform: translate(-21px, 175px);
+    }
+
+    #slinky .layer:nth-child(9) svg{
+        transform: translate(-24px, 200px);
+    }
+</style>
+<div class="wrapper">
+    <ul id="slinky">
+        <li class="layer" data-depth="0.11">
+            <svg width="2102" height="782" viewBox="0 0 2102 782" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path opacity="0.7"
+                      d="M2099.56 781.086C1755.28 471.667 887.845 -113.676 172.331 20.3074C-543.183 154.291 1159.02 583.32 2099.56 781.086Z"
+                      stroke="white"/>
+            </svg>
+        </li>
+        <li class="layer" data-depth="0.0808">
+            <svg width="2102" height="783" viewBox="0 0 2102 783" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path opacity="0.622222"
+                      d="M2099.51 781.663C1755.23 472.244 887.798 -113.099 172.284 20.8844C-543.229 154.868 1158.97 583.897 2099.51 781.663Z"
+                      stroke="white"/>
+            </svg>
+        </li>
+        <li class="layer" data-depth="0.0606">
+            <svg width="2102" height="783" viewBox="0 0 2102 783" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path opacity="0.544444"
+                      d="M2099.46 781.24C1755.18 471.821 887.751 -113.522 172.237 20.4615C-543.276 154.445 1158.92 583.474 2099.46 781.24Z"
+                      stroke="#F9C04E"/>
+            </svg>
+        </li>
+        <li class="layer" data-depth="0.0404">
+            <svg width="2102" height="783" viewBox="0 0 2102 783" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path opacity="0.466667"
+                      d="M2099.41 781.817C1755.14 472.398 887.704 -112.945 172.191 21.0385C-543.323 155.022 1158.88 584.051 2099.41 781.817Z"
+                      stroke="#CB4D40"/>
+            </svg>
+        </li>
+        <li class="layer" data-depth="0.0202">
+            <svg width="2102" height="783" viewBox="0 0 2102 783" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path opacity="0.388889"
+                      d="M2099.37 781.394C1755.09 471.975 887.657 -113.368 172.144 20.6156C-543.37 154.599 1158.83 583.628 2099.37 781.394Z"
+                      stroke="#5E94AF"/>
+            </svg>
+        </li>
+        <li class="layer" data-depth="0.011">
+            <svg width="2102" height="782" viewBox="0 0 2102 782" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path opacity="0.311111"
+                      d="M2099.32 780.971C1755.04 471.552 887.61 -113.791 172.097 20.1926C-543.417 154.176 1158.78 583.205 2099.32 780.971Z"
+                      stroke="white"/>
+            </svg>
+        </li>
+        <li class="layer" data-depth="-0.0202">
+            <svg width="2101" height="783" viewBox="0 0 2101 783" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path opacity="0.233333"
+                      d="M2099.27 781.548C1755 472.129 887.564 -113.214 172.05 20.7697C-543.464 154.753 1158.74 583.782 2099.27 781.548Z"
+                      stroke="white"/>
+            </svg>
+        </li>
+        <li class="layer" data-depth="-0.0404">
+            <svg width="2101" height="782" viewBox="0 0 2101 782" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path opacity="0.155556"
+                      d="M2099.23 781.125C1754.95 471.706 887.517 -113.637 172.003 20.3468C-543.511 154.33 1158.69 583.359 2099.23 781.125Z"
+                      stroke="white"/>
+            </svg>
+        </li>
+        <li class="layer" data-depth="-0.0606">
+            <svg width="2101" height="783" viewBox="0 0 2101 783" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path opacity="0.0777778"
+                      d="M2099.18 781.702C1754.9 472.283 887.47 -113.06 171.956 20.9238C-543.558 154.908 1158.64 583.936 2099.18 781.702Z"
+                      stroke="white"/>
+            </svg>
+        </li>
+    </ul>
+</div>
+<script src="./js/jquery.min.js"></script>
+<script src="./js/jquery.parallax.js"></script>
+<script>
+    $('#slinky').parallax()
+</script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test2</title>
+</head>
+<body>
+<style>
+    .swiper-slide .slide-img {
+        width: 548px;
+        height: 600px;
+        border-radius: 20px;
+        background: url("./img/slider1.jpg");
+        position: relative;
+        cursor: none;
+    }
+
+    .magnifier {
+        width: 210px;
+        height: 210px;
+        background: #156AD4;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        font-weight: 900;
+        line-height: 30px;
+        color: #FFFFFF;
+        position: absolute;
+        pointer-events: none;
+        opacity: 0;
+        transition: 0.3s ease;
+    }
+    .magnifier::selection{
+        background: none;
+        color: #FFFFFF;
+    }
+    .slide-img:hover .magnifier {
+        opacity: 1;
+    }
+</style>
+<div class="swiper-slide">
+    <div class="slide-img">
+        <div class="magnifier">VIEW</div>
+    </div>
+    <div class="slide-img">
+        <div class="magnifier">VIEW</div>
+    </div>
+    <div class="slide-img">
+        <div class="magnifier">VIEW</div>
+    </div>
+</div>
+<script src="./js/jquery.min.js"></script>
+<script>
+    $('.slide-img').on('mousemove', function (e) {
+        let maga = $(this).find('.magnifier');
+        let offset = $(this).offset();
+
+        maga.css({
+            left: (e.pageX - offset.left - 105) + 'px',
+            top: (e.pageY - offset.top - 105) + 'px',
+        })
+    })
+</script>
+</body>
+</html>
