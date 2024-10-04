@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/select2.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+</head>
+<body>
+<form id="form" action="">
+    <label for="name">Your name</label>
+    <input id="name" type="text" name="name">
+    <label>
+        <input type="email" name="email">
+    </label>
+    <label>
+        <input id="password" type="password" name="password">
+    </label>
+    <label>
+        <input type="password" name="passwordRepeat">
+    </label>
+    <select style="width: 200px" name="city" id="select" multiple>
+        <option value="dp">Dnipro</option>
+        <option value="dp">Dnipro1</option>
+        <option value="dp">Dnipro2</option>
+        <option value="dp">Dnipro3</option>
+        <option value="dp">Dnipro4</option>
+    </select>
+    <button type="submit">Send</button>
+</form>
+<table id="table">
+    <thead>
+        <tr>
+            <th>111</th>
+            <th>222</th>
+            <th>333</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>123</td>
+            <td>321</td>
+            <td>222</td>
+        </tr>
+        <tr>
+            <td>123</td>
+            <td>321</td>
+            <td>222</td>
+        </tr>
+        <tr>
+            <td>333</td>
+            <td>444</td>
+            <td>555</td>
+        </tr>
+    </tbody>
+</table>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="./js/jquery.validate.min.js"></script>
+<script src="js/select2.full.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#form').validate({
+            rules: {
+                name: {
+                    required: true,
+                },
+                email: {
+                    required: true,
+                    email: true,
+                },
+                password: {
+                    required: true,
+                },
+                passwordRepeat: {
+                    equalTo: "#password",
+                }
+            },
+            messages: {
+                name: {
+                    required: "Введіть ваше ім'я"
+                }
+            },
+            submitHandler: function(form) {
+                form.submit();
+            }
+        })
+        $('#select').select2({
+            placeholder: "hola",
+            minimumResultsForSearch: Infinity,
+            maximumSelectionLength: 2,
+        })
+        $('#table').DataTable({
+            paging: true,
+            ordering: true,
+            searching: true,
+
+        })
+    })
+</script>
+</body>
+</html>
