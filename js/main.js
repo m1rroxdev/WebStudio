@@ -30,3 +30,12 @@ const swiper = new Swiper(".mySwiper", {
         disableOnInteraction: false,
     },
 });
+$('.slide-img').on('mousemove', function (e) {
+    let magnifier = $(this).find('.magnifier');
+    let offset = $(this).offset();
+
+    magnifier.css({
+        left: (e.pageX - offset.left - 105) + 'px',
+        top: (e.pageY - offset.top - 105) + 'px',
+    })
+})

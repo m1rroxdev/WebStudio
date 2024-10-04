@@ -580,6 +580,8 @@ footer {
     width: 548px;
     height: 600px;
     border-radius: 20px;
+    position: relative;
+    cursor: none;
 }
 
 .swiper-slide:nth-child(1) .slide-img {
@@ -615,4 +617,31 @@ footer {
 
 .swiper-slide {
     width: fit-content !important;
+}
+
+.magnifier {
+    width: 210px;
+    height: 210px;
+    background: #156AD4;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 30px;
+    color: #FFFFFF;
+    position: absolute;
+    pointer-events: none;
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+.magnifier::selection {
+    background: none;
+    color: #FFFFFF;
+}
+
+.slide-img:hover .magnifier {
+    opacity: 1;
 }
