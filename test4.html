@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style>
+    div{
+        width: 90%;
+        height: 100vh;
+    }
+</style>
+<div>
+    <canvas id="myChart"></canvas>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    const ctx = document.getElementById('myChart');
+
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September'],
+            datasets: [{
+                label: 'BTC value in 2024 ($)',
+                data: [48969, 64000, 73777, 72797, 71979, 71997, 70079, 65659, 66498],
+                borderWidth: 2,
+                borderRadius: 10,
+                backgroundColor: '#FF8C00',
+                borderColor: '#000000',
+                color: '#000000',
+            }]
+        },
+        options: {
+            scales: {
+                x:{
+                    ticks: {
+                        font: {
+                            size: 18,
+                            weight: 800,
+                        }
+                    }
+                },
+                y: {
+                    beginAtZero: true,
+                    ticks: {
+                        font: {
+                            size: 18,
+                        }
+                    }
+                }
+            },
+            plugins: {
+                legend: {
+                    labels: {
+                        font: {
+                            size: 18,
+                        }
+                    }
+                },
+            }
+        }
+    });
+</script>
+</body>
+</html>
