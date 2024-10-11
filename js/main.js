@@ -39,3 +39,16 @@ $('.slide-img').on('mousemove', function (e) {
         top: (e.pageY - offset.top - 105) + 'px',
     })
 })
+$('#toast-btn').click(function(){
+    Toastify({
+        text: `Hello`,
+        duration: -1,
+        gravity: "top",
+        position: "right",
+        close: true,
+        escapeMarkup: false,
+        style: {
+            background: `#e82ec6`,
+        },
+        }).showToast();
+})
